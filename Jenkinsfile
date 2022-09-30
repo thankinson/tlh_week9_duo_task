@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Build Flask container'){
             steps {
-                sh 'docker run -d --network duo-network --name server thankinson/flaskapp:latest'
+                sh 'docker run -d --network duo-network --name server flaskapp:latest'
             }
         }
         stage('Build and run nginx'){
